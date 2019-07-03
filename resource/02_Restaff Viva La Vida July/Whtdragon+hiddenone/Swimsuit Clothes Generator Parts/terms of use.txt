@@ -1,0 +1,16 @@
+Name: whtdragon & hiddenone
+
+Terms of Use: Free to use in commercial and noncommercial games as long as credit is given to whtdragon and hiddenone.  Free to edit, change and add on to.
+
+Contact Info: 
+- PM hiddenone for any questions regarding generator issues
+- find contacts and more things whtdragon made here:
+http://himeworks.com/wiki/index.php?title=Creators/whtdragon
+https://www.patreon.com/whtdragon
+http://forums.rpgmakerweb.com/index.php?/topic/53552-whtdragons-animals-and-running-horses-now-with-more-dragons/
+
+Details: Two swimsuits and an Accessory A popsicle for generator!
+
+Just drag & drop the folders into your generator to add them, and restart your MV to see them in the generator.
+
+If they aren't appearing in your generator, please make sure your MV version is at least 1.3.2.  Renumbering them so they are in numerical order for your generator may be necessary if the pieces don't appear on the sprites.

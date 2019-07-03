@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/SV_Clothing1_p551_c.png-a1d3015480e60c5550a1116f1dbe5651.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://resource/02_Restaff Viva La Vida July/Whtdragon+hiddenone/Swimsuit Clothes Generator Parts/SV/Female/SV_Clothing1_p551_c.png"
+dest_files=[ "res://.import/SV_Clothing1_p551_c.png-a1d3015480e60c5550a1116f1dbe5651.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
