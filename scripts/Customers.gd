@@ -18,7 +18,7 @@ func spawn() -> void:
 	
 	var customer = customer_node.instance()
 	add_child(customer)
-	customer.position = Vector2(84,512)
+	customer.position = Vector2(210,640)
 	
 	# choose random delay time
 	randomize()

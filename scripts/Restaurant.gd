@@ -46,4 +46,4 @@ func customer_movement() -> void:
 		
 		elif customer.leaving:
 			customer.isMoving = true
-			customer.path = navigation.get_simple_path(customer.global_position, Vector2(52,512), false)
+			customer.path = navigation.get_simple_path(customer.global_position, Vector2(210,640), false)

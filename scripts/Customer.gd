@@ -7,19 +7,20 @@ export var speed:float = 150
 var path := PoolVector2Array() setget set_path
 var isMoving:bool = false
 
-var angry = false
+var angry:bool = false
+var patience:float = 5
+onready var patience_bar = $Patience_bar
 
 var table:Area2D
 
 var waiting_in_line:bool = true
 var waiting_menu:bool = false
-var waiting_time_menu = 0
 var waiting_food:bool = false
-var waiting_time_food = 0
 var leaving = false
 
 func _ready() -> void:
-	pass
+	patience_bar.initialize(patience)
+	patience_bar.hide()
 
 func _process(delta:float) -> void:
 	if isMoving:
@@ -27,13 +28,29 @@ func _process(delta:float) -> void:
 		move_along_path(move_distance)
 	
 	elif waiting_menu:
-		waiting_time_menu += delta
-		if waiting_time_menu > 5:
-			leaving = true
-			table.free = true
-			waiting_menu = false
-		elif waiting_time_menu > 2:
-			angry = true
+		patience_bar.show()
+		patience -= delta
+		patience_bar.value = patience
+		if patience < 0:
+			leave()
+		elif patience < 2:
+			infuriate()
+	
+	elif leaving:
+		if position.y < get_viewport_rect().position.y:
+			queue_free()
+
+func infuriate() -> void:
+	if angry: return
+	
+	angry = true
+
+func leave() -> void:
+	if leaving: return
+	
+	leaving = true
+	table.free = true
+	waiting_menu = false
 
 func move_along_path(distance:float) -> void:
 	var start_point:Vector2 = position
