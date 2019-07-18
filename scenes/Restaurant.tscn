@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/Restaurant.gd" type="Script" id=1]
 [ext_resource path="res://Tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Table.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scripts/Customers.gd" type="Script" id=5]
+[ext_resource path="res://scripts/Tables.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Table.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/Customers.gd" type="Script" id=6]
 
 [node name="Restaurant" type="Node2D"]
 script = ExtResource( 1 )
@@ -21,27 +22,28 @@ tile_data = PoolIntArray( 0, 536870920, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5
 position = Vector2( 114.292, 270.78 )
 
 [node name="Tables" type="Node" parent="."]
+script = ExtResource( 4 )
 
-[node name="Table_1" parent="Tables" instance=ExtResource( 4 )]
+[node name="Table_1" parent="Tables" instance=ExtResource( 5 )]
 position = Vector2( 440, 430 )
 
-[node name="Table_2" parent="Tables" instance=ExtResource( 4 )]
+[node name="Table_2" parent="Tables" instance=ExtResource( 5 )]
 position = Vector2( 440, 270.84 )
 
-[node name="Table_3" parent="Tables" instance=ExtResource( 4 )]
+[node name="Table_3" parent="Tables" instance=ExtResource( 5 )]
 position = Vector2( 640, 432.84 )
 
-[node name="Table_4" parent="Tables" instance=ExtResource( 4 )]
+[node name="Table_4" parent="Tables" instance=ExtResource( 5 )]
 position = Vector2( 640, 270.84 )
 
-[node name="Table_5" parent="Tables" instance=ExtResource( 4 )]
+[node name="Table_5" parent="Tables" instance=ExtResource( 5 )]
 position = Vector2( 840, 432.84 )
 
-[node name="Table_6" parent="Tables" instance=ExtResource( 4 )]
+[node name="Table_6" parent="Tables" instance=ExtResource( 5 )]
 position = Vector2( 840, 270.84 )
 
 [node name="Path" type="Line2D" parent="."]
 texture_mode = 91
 
 [node name="Customers" type="Node" parent="."]
-script = ExtResource( 5 )
+script = ExtResource( 6 )

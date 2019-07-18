@@ -3,7 +3,10 @@ extends Node
 export var spawn_delay:float = 5
 export var randomness:float = 2
 
-var customer_node = preload('res://scenes/Customer.tscn')
+var customer_node:PackedScene = preload('res://scenes/Customer.tscn')
+onready var tables:Node = get_parent().get_node('Tables')
+
+var line = false
 
 func _ready():
 	set_process(false)
@@ -19,6 +22,14 @@ func spawn() -> void:
 	var customer = customer_node.instance()
 	add_child(customer)
 	customer.position = Vector2(210,640)
+	
+	# do not spawn more customers if there is no table available
+	while tables.get_available_table() == null:
+		if not line:
+			line = true
+			break
+		else:
+			yield(get_tree().create_timer(1), "timeout")
 	
 	# choose random delay time
 	randomize()

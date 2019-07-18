@@ -19,7 +19,8 @@ var waiting_food:bool = false
 var leaving = false
 
 func _ready() -> void:
-	patience_bar.initialize(patience)
+	patience_bar.max_value = patience
+	patience_bar.value = patience
 	patience_bar.hide()
 
 func _process(delta:float) -> void:
@@ -49,7 +50,8 @@ func leave() -> void:
 	if leaving: return
 	
 	leaving = true
-	table.free = true
+	table.customer = null
+	table = null
 	waiting_menu = false
 
 func move_along_path(distance:float) -> void:

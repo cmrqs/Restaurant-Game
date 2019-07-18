@@ -3,7 +3,6 @@ extends Area2D
 onready var player = get_tree().get_root().find_node("Player", true, false)
 
 var mouse_over:bool = false
-var free:bool = true
 
 var customer:Area2D
 
